@@ -1,0 +1,30 @@
+
+    <!-- <app-header></app-header> -->
+    <div id="container">
+        <div id="heading">
+            <!-- <h1 id = "mainHeading">Ware-You-Go</h1> New heading -->
+            <h2 id = "dashboardHeading">User Dashboard</h2>
+        </div>
+        <div id="userDetails">
+            <h2 id = "detailHeading">User Details</h2>
+            <table>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td>{{ user.name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Mobile Number</strong></td>
+                    <td>{{ user.mobileNumber }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Role</strong></td>
+                    <td>{{ user.userType }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+

@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="product--cart-container">
+        <div class="container--left">
+            <h3 class="overview--header">Overview</h3>
+    
+            <div class="overview-content">
+            <div class="item-count-container">
+                <h4>Product Count</h4>
+                <div class="counter item-count">
+                    {{productList.length}}
+                </div>
+            </div>
+            <div class="item-inbound-container">
+                <h4>Inbound</h4>
+                <div class="counter item-inbound-count">
+                    {{inboundCount}}
+                </div>
+            </div>
+            <div class="item-outbound-container">
+                <h4>Outbound</h4>
+                <div class="counter item-outbound-count">
+                    {{outboundCount}}
+                </div>
+            </div>
+            <div class="item-outbound-container">
+                <h4>Internal movement</h4>
+                <div class="counter item-outbound-count">
+                    {{InternalRelocationCount}}
+                </div>
+            </div>
+            <div class="item-outbound-container">
+                <h4>Damaged relocation</h4>
+                <div class="counter item-outbound-count">
+                    {{DamageTransferCount}}
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        <div class="container--right">
+        <div class="container--header">
+            <h2>Product Cart</h2>
+            <div><button (click)="generatePDF()" class="robot--item-button pending">Generate PDF</button>
+            </div>
+        </div>
+        
+    <div class="container--table">
+        <ul class="table--header">
+                <li class="table--header-item productId">Product Code</li>
+                <li class="table--header-item productName">Product</li>
+                <li class="table--header-item transferType">Transfer Type</li>
+                <li class="table--header-item transferLocation">Transfer Location</li>
+                <li class="table--header-item RobotStatus">Status</li>
+        </ul>
+        
+        <div class="table-body">
+            <div class="product--container">
+                    <div class="product--item" *ngFor="let product of productList">
+                    <div class="product--item--productId">{{product.product.productId}}</div>
+                    <div class="product--item--productName">{{product.product.name}}</div>
+                    <div class="product--item--transferType">{{product.ledgerMode}}</div>
+                    <div class="product--item--transferLocation">{{product.location.description}}<br>{{product.location.statusCode}}</div>
+                    <div><button class ="product--item--button" [ngClass]="{'pending': true}" (click)="ApprovalAction(product.ledgerId)">Approve</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

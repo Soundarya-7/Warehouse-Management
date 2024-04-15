@@ -1,0 +1,58 @@
+<div class="card">
+
+<div class="stock--safety-container">
+
+    <div class="container--left">
+
+        <h3 class="overview--header">Overview</h3>
+
+        <div class="overview-content">
+            <div class="item-count-container">
+                <h4>Stock Alert</h4>
+                <div class="counter item-count">
+                    {{items.length}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container--right">
+        <div class="container--header">
+            <h2>Stock Safety Indicator</h2>
+            <div><button (click)="generatePDF()" class="robot--item-button pending">Generate PDF</button>
+            </div>
+        </div>
+
+        <div class="container--table">
+                <ul class="table--header">
+                    <li class="table--header-item productId">Id</li>
+                    <li class="table--header-item productName">Product name</li>
+                    <li class="table--header-item currentStock">Current Stock</li>
+                    <li class="table--header-item threshold">Threshold</li>
+                    <li class="table--header-item supplier">Supplier</li>
+                    <li *ngIf="userType == 'MANAGER'" class="table--header-item status">Status</li>
+                </ul>
+        
+            <div class="table-body">
+                <div class="stock-safety--container">
+                        <div class="stock-safety--item" *ngFor="let item of items" >
+                        <div class="stock-safety--productId">{{item.productId}}</div>
+                        <div class="stock-safety--productName">{{item.name}}</div>
+                        <div class="stock-safety--currentstock">{{item.currentStock}}</div>
+                        <div class="stock-safety--threshold">{{item.threshold}}</div>
+                        <div class="stock-safety--supplier">{{item.supplier}}</div>
+                        <div *ngIf="userType == 'MANAGER' ">
+                            <button class ="stock-safety--button"  [ngClass]="{'pending': true}"  (click) = "item.status = 'order placed' " >{{item.status}}</button>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+</div>
+
+</div>
+</div>

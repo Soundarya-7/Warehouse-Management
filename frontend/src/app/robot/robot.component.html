@@ -1,0 +1,60 @@
+<div class="robot--card">
+    <div class="robot--component-container">
+        <div class="container--left">
+            <h3 class="overview--header">Overview</h3>
+    
+            <div class="overview-content">
+            <div class="item-count-container">
+                <h4>Robot Count</h4>
+                <div class="counter item-count">
+                    {{robotList.length}}
+                </div>
+            </div>
+            <!-- <div class="item-inbound-container">
+                <h4>Inbound</h4>
+                <div class="counter item-inbound-count">
+                    10
+                </div>
+            </div>
+            <div class="item-outbound-container">
+                <h4>Outbound</h4>
+                <div class="counter item-outbound-count">
+                    10
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    <div class="container--right">
+        <div class="container--header">
+            <h2>Robot List</h2>
+            <div><button (click)="generatePDF()" class="robot--item-button pending">Generate PDF</button>
+            </div>
+        </div>
+       
+<div class="container--table">
+    <ul class="table--header">
+        <li class="table--header-item robotId">Id</li>
+        <li class="table--header-item robotName">Capacity</li>
+        <li class="table--header-item robotStatus">Status</li>
+        <li class="table--header-item robotLogs">Logs</li>
+    </ul>
+ 
+<div class="table-body">
+    <div class="robot--container">
+            <div class="robot--item" *ngFor="let item of robotList">
+            <div class="robot--item-robotId">{{item.id}}</div>
+            <div class="robot--item-robotName">{{item.maxCapacity}}</div>
+            <div class="robot--item-transferType">{{item.currentStatus}}</div>
+            <div>
+                <button class ="robot--item-button" [ngClass]="{'pending':1}" [routerLink]="['/Robot/RobotLogs', item.id]" >show Logs</button>
+            </div>
+        </div>
+        
+    
+    </div>
+    
+</div>
+ 
+</div>
+</div>

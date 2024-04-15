@@ -1,0 +1,133 @@
+
+.card {
+    padding: 5vh 5vw;
+    background-image: linear-gradient(45deg,
+    rgba(20, 19, 19, 0.75),
+    rgba(129, 129, 129, 0.75)), 
+    url('src/assets/images/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.stock--safety-container{
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(255, 255, 255, 0.377);
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: stretch;
+}
+
+.container--left{
+width: 20vw;
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background: rgba(97, 111, 236, 0.692);
+padding: 2rem;
+color: var(--secondary-font-color);
+
+display: flex;
+flex-direction: column;
+
+}
+
+.overview-content{
+
+display: flex;
+
+flex-direction: column;
+justify-content: space-between;
+}
+
+
+.counter{
+font-size: 2rem;
+font-weight: bold;
+}
+
+.overview--header{
+font-weight: bold;
+}
+
+.container--right{
+padding: 2rem;
+flex: 1;
+}
+
+.container--header>h2{
+font-weight: bold;
+color: #f3f3f3;
+}
+
+.container--table{
+height: 80vh;
+
+display: grid;
+grid-template-rows: min-content auto;
+}
+
+.table--header-item{
+color: #f3f3f3;
+}
+
+.table--header{
+padding: 1rem;
+border-bottom: .2rem solid #d3d3d3;
+font-size: 1.2rem;
+font-weight: bold;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+text-align: center;
+
+}
+
+
+
+
+.stock-safety--container{
+display: block;
+width: 100%;
+height: 100%;    
+background: #ffffff;
+text-align: center; 
+
+}
+
+.table-body{
+overflow: scroll;
+background: #fff;
+}
+
+
+.stock-safety--item{
+padding: 1rem;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+border-bottom: .1rem solid #d3d3d3;
+
+
+}
+
+.container--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+border: none;
+font-weight: 700;
+}
+
+.pending {
+padding: .5em 1em;
+background: var(--secondary-color);
+border: none;
+text-align: center;
+outline: none;
+cursor: pointer;
+}

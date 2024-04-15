@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="robot--logs-container">
+        <div class="container--left">
+           <div>
+            <h2>Robot ID</h2>
+            <h3>{{robotList[0].robot.id}}</h3>
+           </div>
+
+           <div><button (click)="generatePDF()" class="robot--item-button pending">Generate PDF</button>
+           </div>
+    </div>
+
+
+<div class="container--right">
+    <div class="container--header">
+    </div>
+    <div class="container--table">
+<div class="container--table">
+    <ul class="table--header">
+        
+            <li class="robot--logs-productId">Log Id</li>
+            <li class="robot--logs-RobotStatus">Start time</li>
+            <li class="robot--logs-RobotStatus">End Time</li>
+            <li class="robot--logs-logs">Accessed Location Id</li>
+        </ul>
+    <div class="table-body">
+        <div class="robot--logs--container">
+            <div class="robot--logs--item" *ngFor="let item of robotList">
+            <div class="robot--logs--productId">{{item.id}}</div>
+            <div class="robot--logs--transferType">{{item.startTime}}</div>
+            <div class="robot--logs--transferType">{{item.endTime}}</div>
+            <div class="robot--logs--transferType">{{item.accessedLocationID}}</div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

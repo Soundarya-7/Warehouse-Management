@@ -1,0 +1,66 @@
+.navbar{
+    display: flex;
+    justify-content: left;
+    background-color: bisque;
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+}
+
+.navbar li{
+    margin: 0px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: brown;
+    padding: 10px 15px;
+    margin: 0px;
+}
+
+.navbar a:hover{
+    background-color: burlywood;
+}
+
+:host {
+    display: block;
+    height: 100%;
+  }
+  
+  
+/* Header styling */
+.header {
+  background-color: lightgray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Responsive header text */
+.header div {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .header div:nth-child(2),
+  .header div:nth-child(3) {
+    display: none;
+  }
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Submit button styling */
+.btn-primary {
+  float: right;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
